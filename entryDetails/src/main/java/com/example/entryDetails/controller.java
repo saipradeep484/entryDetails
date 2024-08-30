@@ -16,9 +16,9 @@ import com.example.entryDetails.model.Students;
 import com.example.entryDetails.service.service;
 
 @RestController
-@RequestMapping("endpoint")
+@RequestMapping("/ending1")
 public class controller {
-    public service ser;
+    private final service ser;
     @Autowired public controller (service ser){
         this.ser=ser;
     }
@@ -31,11 +31,7 @@ public class controller {
     public Students method2(@RequestBody Students book) {
         return ser.createPatientDetails(book);
     }
-
-    // @PutMapping("/{id}")
-    // public Book updateBook(@PathVariable Long id, @RequestBody Book book) {
-    //     return bookService.updateBook(id, book);
-    // }
+   
 
     @DeleteMapping({"id"})
     public void method2(@PathVariable long id)

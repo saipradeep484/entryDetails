@@ -10,8 +10,9 @@ import com.example.entryDetails.repository.repo;
 
 @Service
 public class service {
-    public repo rp ;
-    @Autowired public service(repo rp )
+    private final repo rp ;
+    @Autowired 
+    public service(repo rp)
     {
         this.rp=rp;
     }
@@ -24,4 +25,5 @@ public class service {
     public void deletePatientDetails(Long id) {
         rp.deleteById(id);
     }
+  
 }

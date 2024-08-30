@@ -2,7 +2,8 @@ package com.example.entryDetails.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-@Document(collection = "endpoint")
+
+@Document(collection = "Endpoint")
 public class Students {//general details for health checkup in the hospital
     private String name;
     @Id
